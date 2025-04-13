@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #18181b, #000);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      animation: fadeDown 0.6s ease forwards;
+    }
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #fff; }
+    main {
+      padding: 5rem 1.5rem 2rem;
+      text-align: center;
+    }
+    main h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      animation: fadeUp 0.8s ease forwards;
+    }
+    main p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: #aaa;
+      font-size: 1.125rem;
+      animation: fadeIn 0.6s ease 0.3s forwards;
+    }
+    .buttons a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      margin: 0 0.5rem;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .primary-btn {
+      background: #3b82f6;
+      color: #fff;
+    }
+    .primary-btn:hover {
+      background: #2563eb;
+    }
+    .outline-btn {
+      border: 1px solid #333;
+      color: #ccc;
+    }
+    .outline-btn:hover {
+      background: #1c1c1f;
+    }
+    section {
+      padding: 4rem 1.5rem;
+      background-color: #09090b;
+    }
+    section h3 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      animation: fadeIn 0.6s ease forwards;
+    }
+    .features {
+      display: grid;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .card {
+      background: #1c1c1f;
+      padding: 1.5rem;
+      border: 1px solid #2a2a2e;
+      border-radius: 1rem;
+      transition: transform 0.3s ease;
+      animation: fadeUp 0.6s ease forwards;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h4 {
+      color: #3b82f6;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+    .terminal {
+      background: #0d0d0f;
+      border: 1px solid #2a2a2e;
+      padding: 1.5rem;
+      max-width: 700px;
+      margin: 2rem auto;
+      border-radius: 1rem;
+      font-family: monospace;
+      font-size: 0.95rem;
+      color: #3bff77;
+      line-height: 1.6;
+      white-space: pre-line;
+      animation: fadeIn 1s ease forwards;
+      text-align: left;
+    }
+    footer {
+      padding: 2rem;
+      text-align: center;
+      color: #888;
+      border-top: 1px solid #2a2a2e;
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color:#3b82f6; font-weight: bold; font-size: 1.5rem">Aura</h1>
+    <nav>
+      <a href="https://github.com/vishal-ahirwar/aura/wiki" target="_blank">Docs</a>
+      <a href="#external-libraries">Why Aura?</a>
+      <a href="https://github.com/vishal-ahirwar/aura" target="_blank">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>One Toolchain. Any Platform.</h2>
+    <p>Aura is a powerful tool for C/C++ learners, designed to streamline the process of setting up and managing projects. With Aura, you can focus on learning and coding instead of dealing with repetitive tasks like creating folders, writing CMake files, or compiling manually.</p>
+    <div class="buttons">
+      <a href="https://github.com/vishal-ahirwar/aura?tab=readme-ov-file#aura" class="primary-btn" target="_blank">⚡ Get Started</a>
+      <a href="https://github.com/vishal-ahirwar/aura" class="outline-btn" target="_blank">GitHub</a>
+    </div>
+    <div class="terminal">
+$ aura create myapp
+$ aura install sdl2
+$ aura install libpqxx
+$ aura build
+$ aura build --standalone
+    </div>
+    
+  </main>
+
+  <section id="external-libraries">
+    <h3>Why Aura?</h3>
+    <div class="features">
+        <div class="card">
+            <h4>Effortless Dependency Management</h4>
+            <p>Aura simplifies the process of integrating external libraries into your C++ project. Using the power of <strong>vcpkg</strong>, Aura can automatically install, configure, and manage libraries for you, so you no longer have to worry about version mismatches or missing dependencies. Whether you're working with popular libraries or niche ones, Aura ensures a smooth integration process.</p>
+          </div>
+          
+          <div class="card">
+            <h4>Cross-Platform Compatibility</h4>
+            <p>With vcpkg, Aura guarantees that your libraries are compatible across all major platforms—Windows, Linux, and macOS—making it easier to work in any environment without the hassle of manual configurations.</p>
+          </div>
+          
+          <div class="card">
+            <h4>Quick Environment Setup</h4>
+            <p>Set up your entire C/C++ development environment effortlessly with just a single command. Aura streamlines your workflow by quickly installing and configuring the necessary tools, libraries, and settings to help you focus on writing code, not managing environments.</p>
+          </div>
+          
+          <div class="card">
+            <h4>Integrated Unit Testing</h4>
+            <p>Running unit tests for your C and C++ projects has never been easier. Aura provides seamless integration with popular testing frameworks, allowing you to quickly set up and execute tests, ensuring that your code is always reliable and ready for deployment.</p>
+          </div>
+          
+          <div class="card">
+            <h4>Automated Project Setup</h4>
+            <p>Generate a new C/C++ project structure with ease. Aura creates a standardized and well-organized directory layout, allowing you to focus on building your project rather than setting up folders, files, and configurations. This automated setup ensures consistency across all your projects.</p>
+          </div>
+          
+          <div class="card">
+            <h4>Best Practices</h4>
+            <p>Even your simplest Hello-World application will follow best practices when using Aura. It provides scalable, modular project structures that grow with your needs. Install external libraries without even touching your <code>CMakeLists.txt</code> file. Aura ensures that your project stays clean, maintainable, and production-ready.</p>
+          </div>
+          
+          <div class="card">
+            <h4>Seamless CMake Integration</h4>
+            <p>Aura integrates smoothly with CMake, eliminating the need for manual configuration adjustments. When you add new dependencies through vcpkg, Aura automatically updates your CMake setup, saving you time and effort in maintaining your build system.</p>
+          </div>
+          
+          <div class="card">
+            <h4>Version Control Integration</h4>
+            <p>Aura helps you manage version control for your projects easily. With built-in support for Git, it can automatically track changes to your project files, dependencies, and CMake configurations. This ensures that your development process stays organized and efficient, from initial setup to final deployment.</p>
+          </div>
+          
+          <div class="card">
+            <h4>Continuous Integration Support</h4>
+            <p>Integrate Aura with your continuous integration (CI) pipeline effortlessly. Aura provides easy-to-use tools for automating build processes, testing, and deployment, making it perfect for teams that need reliable and repeatable workflows.</p>
+          </div>
+          
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vishal Ahirwar. Made with ⚡ for developers.</p>
+  </footer>
+</body>
+</html>
