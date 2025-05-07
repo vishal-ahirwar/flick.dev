@@ -145,86 +145,82 @@
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1 style="color:#3b82f6; font-weight: bold; font-size: 1.5rem">Solix</h1>
-    <nav>
-      <a href="https://github.com/vishal-ahirwar/Solix/wiki" target="_blank">Docs</a>
-      <a href="#external-libraries">Why Solix?</a>
-      <a href="https://github.com/vishal-ahirwar/Solix" target="_blank">GitHub</a>
-    </nav>
-  </header>
-
-  <main>
-    <h2>One Toolchain. Any Platform.</h2>
-    <p>Solix is a powerful tool for C/C++ learners, designed to streamline the process of setting up and managing projects. With Solix, you can focus on learning and coding instead of dealing with repetitive tasks like creating folders, writing CMake files, or compiling manually.</p>
-    <div class="buttons">
-      <a href="https://github.com/vishal-ahirwar/Solix?tab=readme-ov-file#Solix" class="primary-btn" target="_blank">⚡ Get Started</a>
-      <a href="https://github.com/vishal-ahirwar/Solix" class="outline-btn" target="_blank">GitHub</a>
-    </div>
-    <div class="terminal">
-$ Solix create myapp
-$ Solix install sdl2
-$ Solix install libpqxx
-$ Solix build
-$ Solix build --standalone
-    </div>
-    
-  </main>
-
-  <section id="external-libraries">
-    <h3>Why Solix?</h3>
-    <div class="features">
-        <div class="card">
-            <h4>Effortless Dependency Management</h4>
-            <p>Solix simplifies the process of integrating external libraries into your C++ project. Using the power of <strong>vcpkg</strong>, Solix can automatically install, configure, and manage libraries for you, so you no longer have to worry about version mismatches or missing dependencies. Whether you're working with popular libraries or niche ones, Solix ensures a smooth integration process.</p>
+<!-- [Same <head> section, unchanged] -->
+    <body>
+        <header>
+          <h1 style="color:#3b82f6; font-weight: bold; font-size: 1.5rem">Solix</h1>
+          <nav>
+            <a href="https://github.com/vishal-ahirwar/Solix/wiki" target="_blank">Docs</a>
+            <a href="#external-libraries">Why Solix?</a>
+            <a href="https://github.com/vishal-ahirwar/Solix" target="_blank">GitHub</a>
+          </nav>
+        </header>
+      
+        <main>
+          <h2>Build C/C++ Projects Smarter. Everywhere.</h2>
+          <p>Solix is a blazing-fast C/C++ toolchain that automates project setup, dependency management, and builds across platforms. Whether you're a beginner or shipping production code, Solix handles the tedious setup so you can focus on writing better software.</p>
+          <div class="buttons">
+            <a href="https://github.com/vishal-ahirwar/Solix?tab=readme-ov-file#Solix" class="primary-btn" target="_blank">⚡ Get Started</a>
+            <a href="https://github.com/vishal-ahirwar/Solix" class="outline-btn" target="_blank">GitHub</a>
           </div>
-          
-          <div class="card">
-            <h4>Cross-Platform Compatibility</h4>
-            <p>With vcpkg, Solix guarantees that your libraries are compatible across all major platforms—Windows, Linux, and macOS—making it easier to work in any environment without the hassle of manual configurations.</p>
+          <div class="terminal">
+      $ solix create mygame
+      $ solix install glfw
+      $ solix install glm
+      $ solix build
+      $ solix release --standalone
+      $ solix doctor
           </div>
-          
-          <div class="card">
-            <h4>Quick Environment Setup</h4>
-            <p>Set up your entire C/C++ development environment effortlessly with just a single command. Solix streamlines your workflow by quickly installing and configuring the necessary tools, libraries, and settings to help you focus on writing code, not managing environments.</p>
+        </main>
+      
+        <section id="external-libraries">
+          <h3>Why Solix?</h3>
+          <div class="features">
+            <div class="card">
+              <h4>One-Line Project Setup</h4>
+              <p>Create a fully working C/C++ project in one command. Solix generates a clean folder structure, CMake files, Git config, and even your first source file.</p>
+            </div>
+      
+            <div class="card">
+              <h4>Cross-Platform Builds</h4>
+              <p>Target Windows, Linux, and macOS with ease. Solix configures toolchains automatically for native and cross builds using Clang, MSVC, or GCC.</p>
+            </div>
+      
+            <div class="card">
+              <h4>Auto Dependency Management</h4>
+              <p>Install and link libraries using <strong>vcpkg</strong> with zero effort. Solix updates your CMake project automatically—no manual edits needed.</p>
+            </div>
+      
+            <div class="card">
+              <h4>Subproject Support</h4>
+              <p>Split your codebase into reusable modules and build them independently. Solix understands and tracks subprojects for organized development.</p>
+            </div>
+      
+            <div class="card">
+              <h4>Doctor & Tool Detection</h4>
+              <p>Not sure what's missing? Run <code>solix doctor</code> to auto-detect and install missing compilers, build tools, or environments.</p>
+            </div>
+      
+            <div class="card">
+              <h4>Best Practices by Default</h4>
+              <p>Every Solix project follows modern CMake, Git versioning, and modular practices so even your first app is production-grade from the start.</p>
+            </div>
+      
+            <div class="card">
+              <h4>Integrated CI/CD Ready</h4>
+              <p>Export ready-to-use CI templates for GitHub Actions and GitLab pipelines. Easily build, test, and deploy C++ projects automatically.</p>
+            </div>
+      
+            <div class="card">
+              <h4>Beginner Friendly</h4>
+              <p>No more spending hours setting up CMake, headers, compilers, and folders. Solix was built for C/C++ learners who just want to start coding now.</p>
+            </div>
           </div>
-          
-          <div class="card">
-            <h4>Integrated Unit Testing</h4>
-            <p>Running unit tests for your C and C++ projects has never been easier. Solix provides seamless integration with popular testing frameworks, allowing you to quickly set up and execute tests, ensuring that your code is always reliable and ready for deployment.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Automated Project Setup</h4>
-            <p>Generate a new C/C++ project structure with ease. Solix creates a standardized and well-organized directory layout, allowing you to focus on building your project rather than setting up folders, files, and configurations. This automated setup ensures consistency across all your projects.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Best Practices</h4>
-            <p>Even your simplest Hello-World application will follow best practices when using Solix. It provides scalable, modular project structures that grow with your needs. Install external libraries without even touching your <code>CMakeLists.txt</code> file. Solix ensures that your project stays clean, maintainable, and production-ready.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Seamless CMake Integration</h4>
-            <p>Solix integrates smoothly with CMake, eliminating the need for manual configuration adjustments. When you add new dependencies through vcpkg, Solix automatically updates your CMake setup, saving you time and effort in maintaining your build system.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Version Control Integration</h4>
-            <p>Solix helps you manage version control for your projects easily. With built-in support for Git, it can automatically track changes to your project files, dependencies, and CMake configurations. This ensures that your development process stays organized and efficient, from initial setup to final deployment.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Continuous Integration Support</h4>
-            <p>Integrate Solix with your continuous integration (CI) pipeline effortlessly. Solix provides easy-to-use tools for automating build processes, testing, and deployment, making it perfect for teams that need reliable and repeatable workflows.</p>
-          </div>
-          
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Vishal Ahirwar. Made with ⚡ for developers.</p>
-  </footer>
-</body>
+        </section>
+      
+        <footer>
+          <p>&copy; 2025 Vishal Ahirwar. Made with ⚡ for developers.</p>
+        </footer>
+      </body>
+      
 </html>
