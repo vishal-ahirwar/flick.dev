@@ -164,12 +164,15 @@
             <a href="https://github.com/vishal-ahirwar/flick" class="outline-btn" target="_blank">GitHub</a>
           </div>
           <div class="terminal">
-      $ flick create mygame
-      $ flick install glfw
-      $ flick install glm
+      $ flick create my-awesome-app
+      $ flick install --package=libpqxx --update-base-line
+      $ flick install --package=restclient-cpp --version=0.5.2 --update-base-line
+      $ flick install --package=qtbase
       $ flick build
+      $ flick subproject client
+      $ flick build client --standalone
+      $ flick tests
       $ flick release --standalone
-      $ flick doctor
           </div>
         </main>
       
